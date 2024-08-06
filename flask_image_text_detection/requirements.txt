@@ -1,0 +1,8 @@
+flask
+opencv-python-headless
+matplotlib
+easyocr
+imutils
+numpy
+Pillow
+gtts

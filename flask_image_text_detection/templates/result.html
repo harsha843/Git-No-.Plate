@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="text-center mt-5 animate__animated animate__fadeInDown">
+            <h1 class="display-4">Detected Text: {{ text }}</h1>
+        </div>
+        
+        <div class="row mt-3 animate__animated animate__fadeInUp">
+            <div class="col-md-4">
+                <h2>Original Image</h2>
+                <img src="{{ url_for('static', filename=original_img) }}" class="img-fluid" alt="Original Image">
+            </div>
+            <div class="col-md-4">
+                <h2>Grayscale Image</h2>
+                <img src="{{ url_for('static', filename=gray_img) }}" class="img-fluid" alt="Grayscale Image">
+            </div>
+            <div class="col-md-4">
+                <h2>Bilateral Filtered Image</h2>
+                <img src="{{ url_for('static', filename=bfilter_img) }}" class="img-fluid" alt="Bilateral Filtered Image">
+            </div>
+        </div>
+        
+        <div class="row mt-3 animate__animated animate__fadeInUp">
+            <div class="col-md-4">
+                <h2>Edge Detected Image</h2>
+                <img src="{{ url_for('static', filename=edged_img) }}" class="img-fluid" alt="Edge Detected Image">
+            </div>
+            <div class="col-md-4">
+                <h2>Mask Image</h2>
+                <img src="{{ url_for('static', filename=mask_img) }}" class="img-fluid" alt="Mask Image">
+            </div>
+            <div class="col-md-4">
+                <h2>Cropped Image</h2>
+                <img src="{{ url_for('static', filename=cropped_img) }}" class="img-fluid" alt="Cropped Image">
+            </div>
+        </div>
+        
+        <div class="text-center mt-5 animate__animated animate__fadeInUp">
+            <h2>Final Image with Detected Text</h2>
+            <img src="{{ url_for('static', filename=final_img) }}" class="img-fluid" alt="Final Image">
+            <h2>Voice Note</h2>
+            <audio controls>
+                <source src="{{ url_for('static', filename=voice_path) }}" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <a href="/" class="btn btn-success mt-5">Upload another image</a>
+        </div>
+    </div>
+</body>
+</html>

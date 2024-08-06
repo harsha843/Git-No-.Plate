@@ -1,0 +1,33 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 20px;
+}
+
+h1, h2 {
+    font-weight: 700;
+    color: #343a40;
+}
+
+.container {
+    max-width: 960px;
+    margin: auto;
+}
+
+.btn {
+    font-weight: 700;
+}
+
+.jumbotron {
+    background: linear-gradient(to right, #ff758c 0%, #ff7eb3 100%);
+    color: white;
+}
+
+.card {
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
