@@ -5,6 +5,7 @@ This project allows you to upload an image, detect text within the image using O
 
 ## Project Structure
 
+Note:Create A Virtual Environment of Python [python -m venv [nameofurchoice]] in project directory command prompt
 ```
 FLASK_IMAGE_TEXT_DETECTION/
 │
@@ -91,3 +92,5 @@ FLASK_IMAGE_TEXT_DETECTION/
 This project is licensed under the MIT License.
 
 incase of any error feel free to contact Gautham Prabhu HM
+
+
